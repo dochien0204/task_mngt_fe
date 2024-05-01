@@ -46,6 +46,7 @@ const Members = () => {
       ],
     },
   ];
+
   return (
     <div className="task-wrapper">
       <div className="task-wrapper__list">
@@ -170,3 +171,5 @@ const Members = () => {
     </div>
   );
 };
+
+export default Members;
