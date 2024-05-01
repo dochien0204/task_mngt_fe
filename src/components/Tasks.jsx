@@ -2,6 +2,57 @@ import { Button, Checkbox, Divider, Tag, Input } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
 const Tasks = () => {
+  const items = [
+    {
+      id: Math.random(),
+      name: "Backlog",
+      elements: [
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+      ],
+    },
+    {
+      id: Math.random(),
+      name: "To Do",
+      elements: [
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+        {
+          key: Math.random(),
+          description:
+            "E-mail after registration so that I can confirm my address",
+          type: "DEVELOPMENT",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="task-wrapper">
       <div className="task-wrapper__list">
@@ -10,6 +61,17 @@ const Tasks = () => {
             style={{ display: "flex", flexDirection: "column", gap: 16 }}
             key={item.id}
           >
+            <div className="task-wrapper__list-header">
+              <div className="title">{item.name}</div>
+              <Button
+                type="primary"
+                shape="round"
+                style={{ background: "green" }}
+                icon={<PlusOutlined />}
+              >
+                Add Tasks
+              </Button>
+            </div>
             <div className="task-wrapper__list-items">
               {item.elements.map((ele) => (
                 <div className="task-wrapper__list-item" key={ele.key}>
