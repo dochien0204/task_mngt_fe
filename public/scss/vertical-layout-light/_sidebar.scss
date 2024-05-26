@@ -20,6 +20,10 @@
     margin-bottom: 60px;
 
     .nav-item {
+
+      border: 1px solid #ddd;
+      border-radius: 8px;
+
       @include transition-duration(0.25s);
       transition-property: background;
       -webkit-transition-property: background;
