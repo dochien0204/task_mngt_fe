@@ -1,13 +1,10 @@
-import React from "react";
+import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="d-sm-flex justify-content-center justify-content-sm-between">
-        <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">
-          Copyright © 2024. Development from DXC. All rights reserved.
-        </span>
-      </div>
-    </footer>
+    <footer
+      className='footer'
+      style={{ background: '#fff', margin: '0 auto' }}
+    ></footer>
   );
 }

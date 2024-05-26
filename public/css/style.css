@@ -4,7 +4,7 @@
   gap: 10px;
 
   width: 100%;
-  height: auto;
+  height: 800px;
 }
 
 .task-wrapper .task-wrapper__list {
@@ -19,7 +19,22 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   overflow: auto;
-  max-height: 670px;
+  max-height: 100%;
+}
+
+.task-wrapper .task-wrapper__list-task {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+
+  width: 65%;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  overflow: auto;
+  max-height: 100%;
 }
 
 .task-wrapper__list-header {
@@ -37,8 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-
-  width: 100%;
+  cursor: pointer;
   border-radius: 8px;
 }
 
@@ -105,6 +119,15 @@
 .task-wrapper__detail-middle .file .file-wrapper {
   display: flex;
   gap: 8px;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  cursor: pointer;
 }
 
 .task-wrapper__detail-middle .file .file-wrapper .icon {
@@ -145,18 +168,17 @@
 
 .comment__list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
   width: 100%;
-  max-height: 114px;
+  max-height: 155px;
   overflow: auto;
 }
 
 .comment__list .comment__item {
-  background-color: aliceblue;
-  width: 384px;
-  height: 70px;
+  background-color: rgb(235, 235, 235);
+  width: 80%;
+  height: auto;
   padding: 16px;
   border-radius: 8px;
 }
@@ -164,7 +186,6 @@
 .member__item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
   align-items: start;
 }
 
@@ -226,7 +247,6 @@
 .member__header-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .member__header-info .member__header-name {
@@ -237,7 +257,9 @@
 .member__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .member__task {
@@ -266,6 +288,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 450px;
+  overflow-y: auto;
 }
 
 .member__assigned-item {
